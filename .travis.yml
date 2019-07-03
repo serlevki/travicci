@@ -5,7 +5,7 @@ env:
   global:
     - REGISTRY_USER=orguser
     # REGISTRY_PASS=...
-    - secret: "thisissecret"
+    - secret: "<thisissecret>"
 
 script:
   - docker build --tag orguser/myimage1 .
