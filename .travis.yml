@@ -1,11 +1,24 @@
 sudo: required
 services:
   - docker
+env:
+  global:
+    - REGISTRY_USER=orguser
+    # REGISTRY_PASS=...
+    - secret: "thisissecret"
 
 script:
-  - docker build --tag myimage .
-  - docker run myimage
+  - docker build --tag orguser/myimage1 .
+  - docker run orguser/myawesometeam
 
 after_script:
   - docker images
-  - bash scr1.sh
+
+before_deploy:
+  - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
+deploy:
+  provider: script
+  script: docker push orguser/myawesometeam
+  on:
+    branch: master
+
