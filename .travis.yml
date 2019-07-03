@@ -8,3 +8,4 @@ script:
 
 after_script:
   - docker images
+  - bash scr1.sh
