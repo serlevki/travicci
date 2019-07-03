@@ -4,7 +4,7 @@ services:
 env:
   global:
     - REGISTRY_USER=orguser
-    # REGISTRY_PASS=...
+    - REGISTRY_PASS=gangik228
     - secret: "<thisissecret>"
 
 script:
