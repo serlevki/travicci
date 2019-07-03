@@ -3,13 +3,13 @@ services:
   - docker
 env:
   global:
-    - REGISTRY_USER=orguser
+    - REGISTRY_USER=serlevki
     - REGISTRY_PASS=gangik228
     - secret: "<thisissecret>"
 
 script:
-  - docker build --tag orguser/myawesometeam .
-  - docker run orguser/myawesometeam
+  - docker build --tag serlevki/myawesometeam .
+  - docker run serlevki/myawesometeam
 
 after_script:
   - docker images
@@ -18,7 +18,7 @@ before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
 deploy:
   provider: script
-  script: docker push orguser/myawesometeam
+  script: docker push serlevki/myawesometeam
   on:
     branch: master
 
