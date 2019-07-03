@@ -8,7 +8,7 @@ env:
     - secret: "<thisissecret>"
 
 script:
-  - docker build --tag orguser/myimage1 .
+  - docker build --tag orguser/myawesometeam .
   - docker run orguser/myawesometeam
 
 after_script:
