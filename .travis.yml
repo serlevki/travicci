@@ -24,4 +24,4 @@ deploy:
     branch: master
 
 script:
-  - ./exit.sh
+  - docker-compose down
