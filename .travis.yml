@@ -16,9 +16,12 @@ after_script:
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
   - docker-compose stop
+
 deploy:
   provider: script
   script: docker push serlevki/myawesometeam
   on:
     branch: master
 
+script:
+  - ./exit.sh
