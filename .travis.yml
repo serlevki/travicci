@@ -12,9 +12,10 @@ script:
 
 after_script:
   - docker images
-  - docker-compose stop
+  
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
+  - docker-compose stop
 deploy:
   provider: script
   script: docker push serlevki/myawesometeam
