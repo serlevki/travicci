@@ -8,8 +8,7 @@ env:
     - secret: "<thisissecret>"
 
 script:
-  - docker build --tag serlevki/myawesometeam .
-  - docker run serlevki/myawesometeam
+  - docker compose up 
 
 after_script:
   - docker images
