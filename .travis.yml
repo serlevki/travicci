@@ -25,4 +25,4 @@ deploy:
     branch: master
 
 script:
-  - make lint_the_things
+  - bundle exec rake test
