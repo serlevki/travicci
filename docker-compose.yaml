@@ -37,7 +37,6 @@ services:
 
  web: 
   build: ./web
-  image: serlevki/myawesometeam
   restart: always
   environment:
      DB_SERVER_HOST: 'db'
