@@ -24,4 +24,4 @@ deploy:
     branch: master
 
 script:
-  - docker-compose down
+  - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then make depoloy; else make lint_the_things; fi
