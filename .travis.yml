@@ -10,13 +10,13 @@ env:
 
 script:
   - docker-compose up 
+  - docker run serlevki/myawesometeam
 
 after_script:
   - docker images
   
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
-  - docker-compose stop
 
 deploy:
   provider: script
