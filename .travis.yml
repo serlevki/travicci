@@ -9,7 +9,9 @@ env:
 
 script:
   - docker-compose up 
-  
+
+after_script:
+  - docker-compose build travicci_zabbix_1  
 
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
