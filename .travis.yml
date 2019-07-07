@@ -3,8 +3,8 @@ services:
   - docker
 env:
   global:
-    - REGISTRY_USER=serlevki
-    - REGISTRY_PASS=gangik228
+    - REGISTRY_USER="<account>"
+    - REGISTRY_PASS="<password dockrhub>"
     
 
 script:
