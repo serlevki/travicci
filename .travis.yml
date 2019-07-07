@@ -25,5 +25,4 @@ deploy:
     branch: master
 
 script:
-  - sleep 1000
   - echo "the build was done"
