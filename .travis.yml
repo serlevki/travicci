@@ -8,7 +8,8 @@ env:
     
 
 script:
-  - docker-compose build zabbix-server-mysql  
+  - docker-compose up 
+  
 
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
@@ -16,7 +17,7 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: docker push selevki/myawesometeam 
+  script: bash docker_push
   on:
     branch: master
 
