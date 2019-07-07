@@ -9,7 +9,7 @@ env:
     - secret: "<thisissecret>"
 
 script:
-  - docker-compose up --build 
+  - docker-compose up --tag serlevki/myawesome team 
   
 
 after_script:
@@ -25,7 +25,4 @@ deploy:
   on:
     branch: master
 
-script:
-  - docker ps -a
-  - docker images
 
