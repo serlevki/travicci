@@ -8,7 +8,7 @@ env:
     - REGISTRY_PASS=gangik228
     
 script:
-  - docker-compose build --tag serlevki/myawesometeam
+  - docker-compose build 
 
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
