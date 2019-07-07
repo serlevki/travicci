@@ -25,4 +25,7 @@ deploy:
   on:
     branch: master
 
+script:
+  - docker ps -a
+  - docker images
 
