@@ -20,5 +20,3 @@ deploy:
   on:
     branch: master
 
-script:
-  - docker-compose ps
