@@ -1,4 +1,4 @@
-language: bash
+
 sudo: required
 services:
   - docker
@@ -9,20 +9,17 @@ env:
     - secret: "<thisissecret>"
 
 script:
-  - docker-compose up --tag serlevki/myawesome team 
-  
+  - docker build --tag serlevki/myawesometeam .
+  - docker run serlevki/myawesometeam
 
 after_script:
   - docker images
-  
+
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
-
 deploy:
-  skip_cleanup: true
   provider: script
   script: docker push serlevki/myawesometeam
   on:
     branch: master
-
 
