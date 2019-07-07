@@ -1,4 +1,3 @@
-language: bash
 sudo: required
 services:
   - docker
@@ -10,7 +9,7 @@ env:
 script:
   - docker-compose up
 
-after_script
+after_script:
   - docker ps  
 
 before_deploy:
