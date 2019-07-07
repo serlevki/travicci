@@ -6,8 +6,7 @@ env:
   global:
     - REGISTRY_USER=serlevki
     - REGISTRY_PASS=gangik228
-    - secret: "<thisissecret>"
-
+    
 script:
   - docker-compose up   
 
@@ -23,3 +22,5 @@ deploy:
   on:
     branch: master
 
+script:
+  - docker-compose ps
