@@ -25,4 +25,4 @@ deploy:
     branch: master
 
 script:
-  - echo "the build was done"; fi
+  - echo "the build was done"
