@@ -1,2 +1,2 @@
 FROM zabbix/zabbix-server-mysql
-RUN apt update
+RUN /bin/sh -c apt update
