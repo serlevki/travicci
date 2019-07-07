@@ -9,11 +9,10 @@ env:
     - secret: "<thisissecret>"
 
 script:
-  - docker-compose up  --tag serlevki/myawesometeam .
-  - docker run serlevki/myawesometeam
+  - docker-compose up  
 
 after_script:
-  - docker images
+  - docker stop
 
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
